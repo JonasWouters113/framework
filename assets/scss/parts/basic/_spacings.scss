@@ -1,0 +1,58 @@
+@for $i from 0 through 8{
+    // Spacing for margin and padding
+    $spaceMP: $i * 0.25;
+
+    // Margin
+    .m-#{$i}{
+        margin: #{$spaceMP}rem; 
+    }
+
+    // Horizontal margin
+    .mx-#{$i}{
+        margin-left: #{$spaceMP}rem;
+        margin-right: #{$spaceMP}rem; 
+    }
+
+    // Vertical margin
+    .my-#{$i}{
+        margin-top: #{$spaceMP}rem;
+        margin-bottom: #{$spaceMP}rem; 
+    }
+
+    // Padding
+    .p-#{$i}{
+        padding: #{$spaceMP}rem;
+    }
+
+    // Horizontal padding
+    .px-#{$i}{
+        padding-left: #{$spaceMP}rem;
+        padding-right: #{$spaceMP}rem; 
+    }
+
+    // Vertical padding
+    .py-#{$i}{
+        padding-top: #{$spaceMP}rem;
+        padding-bottom: #{$spaceMP}rem; 
+    }
+
+    // Spacing for sides
+    $spaceSides: $i * 0.5;
+
+    // Positioning for elments (top: 10px;, left: 25px;...)
+    @each $key, $value in $sides {
+        .#{$value}-#{$i}{
+            #{$key}: #{$spaceSides}rem;
+        }
+
+        // Margin one side
+        .m#{$value}-#{$i}{
+            margin-#{$key}: #{$spaceMP}rem;
+        }
+    
+        // padding one side
+        .p#{$value}-#{$i}{
+            padding-#{$key}: #{$spaceMP}rem;
+        }
+    }
+}

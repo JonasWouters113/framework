@@ -1,0 +1,42 @@
+.code {
+    // Extends
+    @extend .p-2;
+    @extend .m-2;
+
+    // Background
+    background-color: theme-var($--theme-background-code);
+
+    // Border
+    border-width: 2px;
+    border-style: solid;
+    border-color: theme-var($--theme-color1);
+    border-radius: 1rem;
+
+    // Font
+    font-family: $font-family-code;
+
+    // Positioning
+    position: relative;
+
+    .top-right {
+        position: absolute;
+        @extend .t-1;
+        @extend .r-1;
+        cursor: pointer;
+    }
+
+    .lineWithNumber {
+        position: relative;
+
+        .lineNumber {
+            position: absolute;
+            right: calc(100% - 30px);
+            width: 30px;
+            text-align: right;
+        }
+
+        .line {
+            margin-left: 40px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+// Initialize all colors
+$--theme-background: --theme-background;
+$--theme-front: --theme-front;
+$--theme-background-code: --theme-background-code;
+$--theme-color1: --theme-color1;
+$--theme-color2: --theme-color2;
+$--theme-accent1: --theme-accent1;
+
+// Default theme (dark)
+$theme-map-dark: (
+    $--theme-background: #000,
+    $--theme-front: #fff,
+    $--theme-background-code: #333,
+    $--theme-color1: #555,
+    $--theme-color2: #777,
+    $--theme-accent1: #FF0000,
+);
+
+// Override the default dark theme with a light theme
+$theme-map-light: (
+    $--theme-background: #fff,
+    $--theme-front: #000,
+    $--theme-background-code: #ddd,
+    $--theme-color1: #999,
+    $--theme-color2: #777,
+    $--theme-accent1: #00FF00,
+);
+
+body.dark{
+    @include spread-map($theme-map-dark);
+}
+body.light{
+    @include spread-map($theme-map-light);
+}

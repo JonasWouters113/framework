@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: theme-var($--theme-color1);
+    border-radius: 50rem 0 0 50rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: theme-var($--theme-color2);
+}

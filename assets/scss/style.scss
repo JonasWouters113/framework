@@ -1,0 +1,19 @@
+// Imports
+@import "parts/imports/imports.scss";
+
+// Mixins
+@import "mixins/mixins.scss";
+
+// Variables
+@import "parts/variables/themes.scss";
+@import "parts/variables/variables.scss";
+
+// SCSS
+// Basics
+@import "parts/basic/_spacings.scss";
+@import "parts/basic/basics.scss";
+@import "parts/basic/scrollbar.scss";
+@import "parts/basic/code.scss";
+
+// Navigation
+@import "parts/layout/navigations.scss";
